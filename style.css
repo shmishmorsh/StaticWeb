@@ -30,9 +30,9 @@
 
 .card h1 {
     font-family: var(--font-ibm-plex-sans);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
+    font-style: light;
+    font-weight:500;
+	font-size: 35px;
     line-height: 1em;
     color: var(--color-title);
     margin-bottom: 30px 0;
