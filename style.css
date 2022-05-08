@@ -1,0 +1,174 @@
+
+ :root {
+	 --color-bg: #eeedeb;
+	 --color-title: #0e1c4e;
+	 --color-summary-1: #ddfff7;
+	 --color-summary-1-highlight: #93e1d8;
+	 --color-summary-2: #fff1e6;
+	 --color-summary-2-highlight: #ffc48b;
+	 --color-summary-3: #fff0f3;
+	 --color-summary-3-highlight: #ffb3c0;
+	 --color-summary-4: #dce8fa;
+	 --color-summary-4-highlight: #b4b3ff;
+	 --font-ibm-plex-sans: 'IBM Plex Sans', sans-serif;
+}
+ html, body {
+	 overflow: auto;
+	 width: 100%;
+	 background: var(--color-bg);
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .card {
+	 background: white;
+	 padding: 38px 36px;
+	 margin-top: 40px;
+	 margin-bottom: 40px;
+	 border-radius: 4px;
+	 box-shadow: 0 8px 10px rgba(0, 0, 0, .1);
+	 width: 100%;
+}
+ .card h1 {
+	 font-family: var(--font-ibm-plex-sans);
+	 font-style: normal;
+	 font-weight: bold;
+	 font-size: 40;
+	 line-height: 1.2;
+	 color: var(--color-title);
+	 margin-bottom: 40px;
+}
+ .card h3 {
+	 font-family: var(--font-ibm-plex-sans);
+	 font-style: italic;
+	 font-weight: light;
+	 font-size: 13px;
+	 line-height: 1.2;
+	 color: var(--color-title);
+	 margin-bottom: 2px;
+}
+ .card details {
+	 display: flex;
+	 border-radius: 5px;
+	 overflow: hidden;
+	 background: rgba(0, 0, 0, .05);
+	 border-left: 45px solid gray;
+	 padding: 45px;
+}
+ .card details {
+	 margin-top: 15px;
+}
+ .card details.Security {
+	 --highlight: var(--color-summary-1-highlight);
+	 background: var(--color-summary-1);
+	 border-left-color: var(--color-summary-1-highlight);
+}
+ .card details.Security p {
+	 list-style-type: card-security;
+}
+ .card details.Providers {
+	 --highlight: var(--color-summary-2-highlight);
+	 background: var(--color-summary-2);
+	 border-left-color: var(--color-summary-2-highlight);
+}
+ .card details.Providers p {
+	 list-style-type: card-providers;
+}
+ .card details.Finance {
+	 --highlight: var(--color-summary-3-highlight);
+	 background: var(--color-summary-3);
+	 border-left-color: var(--highlight);
+}
+ .card details.Finance p {
+	 list-style-type: card-finance;
+}
+
+ .card details.Legal {
+	 --highlight: var(--color-summary-4-highlight);
+	 background: var(--color-summary-4);
+	 border-left-color: var(--color-summary-4-highlight);
+}
+ .card details.Legal p {
+	 font-size: medium;
+	 list-style-type: card-legal;
+}
+
+.card details.HowTo {
+	--highlight: var(--color-summary-5-highlight);
+	background: var(--color-summary-5);
+	border-left-color: var(--highlight);
+}
+.card details.HowTo p {
+	list-style-type: card-howto;
+}
+
+
+ .card details summary, .card details p a{
+	 position: relative;
+	 display: flex;
+	 flex-direction: row;
+	 align-content: center;
+	 justify-content: flex-start;
+	 font-family: var(--font-ibm-plex-sans);
+	 font-style: normal;
+	 font-weight: normal;
+	 font-size: 30px;
+	 color: var(--color-title);
+	 padding: 20px;
+	 cursor: pointer;
+}
+ .card details summary::-webkit-details-marker, .card details p::-webkit-details-marker {
+	 display: none;
+}
+ .card details summary:focus, .card details p:focus {
+	 outline: solid 3px var(--highlight);
+}
+ .card details summary::selection, .card details p::selection {
+	 background-color: var(--highlight);
+}
+ .card details p {
+	 display: list-item;
+	 cursor: default;
+	 margin-left: 3rem;
+	 list-style-type: card;
+}
+ .card details summary::before {
+	 cursor: pointer;
+	 position: absolute;
+	 display: inline-flex;
+	 width: 1rem;
+	 height: 1rem;
+	 left: 1rem;
+	 margin-right: 0.5rem;
+	 content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+ .card details[open] summary {
+	 font-weight: 700;
+}
+ .card details[open] summary::before {
+	 transform: rotate(45deg);
+	 content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+ 
+
+@counter-style card-security {
+	system: cyclic;
+	symbols: 🚨 💌 💳;
+	suffix: " ";
+  }
+
+@counter-style card-providers {
+	system: cyclic;
+	symbols: 🚨 💌 💳;
+	suffix: " ";
+  }
+  @counter-style card-legal {
+	system: cyclic;
+	symbols: ⚕️;
+	suffix: " ";
+  }
+  @counter-style card-finance {
+	system: fixed;
+	symbols: 💉 🩸 😷 🦠 🧫;
+	suffix: " ";
+  }
