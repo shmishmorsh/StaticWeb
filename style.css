@@ -1,6 +1,6 @@
 
  :root {
-	 --color-bg: #eeedeb;
+	 --color-bg: #ffffff;
 	 --color-title: #0e1c4e;
 	 --color-summary-1: #ddfff7;
 	 --color-summary-1-highlight: #93e1d8;
@@ -27,14 +27,17 @@
 	 box-shadow: 0 8px 10px rgba(0, 0, 0, .1);
 	 width: 100%;
 }
- .card h1 {
-	 font-family: var(--font-ibm-plex-sans);
-	 font-style: normal;
-	 font-weight: bold;
-	 line-height: 20px;
-	 color: var(--color-title);
-	 margin-bottom: 60px 0;
+
+.card h1 {
+    font-family: var(--font-ibm-plex-sans);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1.8em;
+    color: var(--color-title);
+    margin-bottom: 60px 0;
 }
+
  .card h3 {
 	 font-family: var(--font-ibm-plex-sans);
 	 font-style: italic;
