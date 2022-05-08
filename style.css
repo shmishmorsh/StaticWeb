@@ -32,8 +32,8 @@
     font-family: var(--font-ibm-plex-sans);
     font-style: normal;
     font-weight: bold;
-    font-size: 90px;
-	
+    font-size: 20px;
+
     line-height: .9em;
     color: var(--color-title);
     margin-bottom: 60px 0;
