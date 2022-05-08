@@ -33,7 +33,7 @@
 	 font-family: var(--font-ibm-plex-sans);
 	 font-style: normal;
 	 font-weight: bold;
-	 font-size: 40;
+	 font-size: 1 rem;
 	 line-height: 1.2;
 	 color: var(--color-title);
 	 margin-bottom: 40px;
