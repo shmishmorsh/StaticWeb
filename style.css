@@ -114,7 +114,7 @@
 	 font-weight: normal;
 	 font-size: 30px;
 	 color: var(--color-title);
-	 padding: 20px;
+	 padding: 10px;
 	 cursor: pointer;
 }
  .card details summary::-webkit-details-marker, .card details p::-webkit-details-marker {
